@@ -10,6 +10,10 @@ const client = createClient({
 
 export const getStaticPaths = async () => {
   const { items } = await client.getEntries({ content_type: "recipe" });
+
+  if (!items.length)
+    return { redirect: { destination: "/", permanent: false } };
+
   const paths = items.map((recipe) => {
     const { slug } = recipe.fields;
     return {
