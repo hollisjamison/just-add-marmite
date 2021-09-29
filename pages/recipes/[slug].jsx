@@ -1,5 +1,5 @@
 import { createClient } from "contentful";
-import { documentToReactComponent, documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Image from 'next/image'
 
 const client = createClient({
@@ -33,7 +33,8 @@ export const getStaticProps = async ({ params }) => {
   })
 
   return {
-    props: { recipe: items[0] }
+    props: { recipe: items[0] },
+    revalidate: 1
   }
 }
 
