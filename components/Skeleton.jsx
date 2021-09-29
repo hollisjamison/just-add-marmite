@@ -3,10 +3,10 @@ const Skeleton = () => {
     <div className="skeleton">
       <div className="s-banner"></div>
       <div className="s-header"></div>
-      <d className="s-content"></d>
-      <d className="s-content"></d>
-      <d className="s-content"></d>
-      <d className="s-content"></d>
+      <div className="s-content"></div>
+      <div className="s-content"></div>
+      <div className="s-content"></div>
+      <div className="s-content"></div>
 
       <style jsx>{`
         .skeleton {
